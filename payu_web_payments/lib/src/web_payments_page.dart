@@ -28,7 +28,7 @@ class _WebPaymentsPageState extends State<WebPaymentsPage> with WebPaymentsContr
     return PayuWidget<WebPaymentsController, WebPaymentsAssembler>(
       assembler: () => assembler,
       builder: (context, controller) => Scaffold(
-        backgroundColor: Theme.of(context).backgroundColor,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         appBar: AppBar(
           title: PayuImage.logo(),
           bottom: PreferredSize(
@@ -58,15 +58,26 @@ class _WebPaymentsPageState extends State<WebPaymentsPage> with WebPaymentsContr
             onPressed: () => controller.didTapBackButton(),
           ),
         ),
-        body: WebView(
-          onWebViewCreated: (webViewController) => controller.didUpdateWebViewController(webViewController),
-          onWebResourceError: (error) => controller.didUpdateWebResourceError(error),
-          initialUrl: controller.initialUri,
-          navigationDelegate: (request) => controller.navigationDecision(request.url),
-          onPageStarted: (uri) => controller.didStartNavigation(uri),
-          onPageFinished: (uri) => controller.didFinishNavigation(uri),
-          javascriptMode: JavascriptMode.unrestricted,
-          gestureNavigationEnabled: true,
+        body: WebViewWidget(
+            
+            controller: WebViewController()
+              ..setJavaScriptMode(JavaScriptMode.unrestricted)
+              ..loadRequest(uri)
+              ..setNavigationDelegate(
+                NavigationDelegate(
+
+                  onWebViewCreated: (webViewController) => controller.didUpdateWebViewController(webViewController),
+                  onWebResourceError: (error) => controller.didUpdateWebResourceError(error),
+                  initialUrl: controller.initialUri,
+                  navigationDelegate: (request) => controller.navigationDecision(request.url),
+                  onPageStarted: (uri) => controller.didStartNavigation(uri),
+                  onPageFinished: (uri) => controller.didFinishNavigation(uri),
+                  javascriptMode: JavascriptMode.unrestricted,
+                  gestureNavigationEnabled: true,
+                )
+              )
+              ,
+
         ),
       ),
     );

@@ -17,7 +17,7 @@ class PBLPaymentMethodsPage extends StatelessWidget {
     return PayuWidget<PBLPaymentMethodsController, PBLPaymentMethodsAssembler>(
       assembler: () => PBLPaymentMethodsAssembler(configuration),
       builder: (context, controller) => Scaffold(
-        backgroundColor: Theme.of(context).backgroundColor,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         appBar: AppBar(
           title: PayuImage.logo(),
         ),

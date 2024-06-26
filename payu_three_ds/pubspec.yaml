@@ -5,26 +5,26 @@ publish_to: none
 homepage: https://github.com/PayU-EMEA/PayU-Flutter
 issue_tracker: https://github.com/PayU-EMEA/PayU-Flutter/issues
 environment:
-  sdk: '>=2.18.0 <4.0.0'
-  flutter: ">=2.5.0"
+  sdk: '>=3.4.3 <4.10.0'
+  flutter: ">=3.22.2"
 dependencies:
   flutter:
     sdk: flutter
   payu_api:
     git:
-      url: https://github.com/PayU-EMEA/PayU-Flutter.git
+      url: https://github.com/rmasarovic/PayU-Flutter
       path: payu_api
   payu_core:
     git:
-      url: https://github.com/PayU-EMEA/PayU-Flutter.git
+      url: https://github.com/rmasarovic/PayU-Flutter
       path: payu_core
   payu_state_management:
     git:
-      url: https://github.com/PayU-EMEA/PayU-Flutter.git
+      url: https://github.com/rmasarovic/PayU-Flutter
       path: payu_state_management
   payu_translations:
     git:
-      url: https://github.com/PayU-EMEA/PayU-Flutter.git
+      url: https://github.com/rmasarovic/PayU-Flutter
       path: payu_translations
   webview_flutter: ^3.0.4
 dev_dependencies:

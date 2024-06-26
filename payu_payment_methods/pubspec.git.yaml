@@ -1,21 +1,21 @@
 
 payu_add_card:
   git:
-    url: https://github.com/PayU-EMEA/PayU-Flutter.git
+    url: https://github.com/rmasarovic/PayU-Flutter
     path: payu_add_card
 payu_core:
   git:
-    url: https://github.com/PayU-EMEA/PayU-Flutter.git
+    url: https://github.com/rmasarovic/PayU-Flutter
     path: payu_core
 payu_state_management:
   git:
-    url: https://github.com/PayU-EMEA/PayU-Flutter.git
+    url: https://github.com/rmasarovic/PayU-Flutter
     path: payu_state_management
 payu_translations:
   git:
-    url: https://github.com/PayU-EMEA/PayU-Flutter.git
+    url: https://github.com/rmasarovic/PayU-Flutter
     path: payu_translations
 payu_ui:
   git:
-    url: https://github.com/PayU-EMEA/PayU-Flutter.git
+    url: https://github.com/rmasarovic/PayU-Flutter
     path: payu_ui

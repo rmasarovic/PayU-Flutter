@@ -22,7 +22,7 @@ class ThemeDataFactory {
   static ThemeData _data(ThemeColorsPallete pallete) {
     return ThemeData(
       appBarTheme: _appBarTheme(pallete),
-      backgroundColor: pallete.secondaryGray4,
+      scaffoldBackgroundColor: pallete.secondaryGray4,
       buttonTheme: _buttonTheme(pallete),
       cardTheme: _cardTheme(pallete),
       colorScheme: _colorScheme(pallete),
@@ -120,14 +120,14 @@ class ThemeDataFactory {
 
   static TextTheme _textTheme(ThemeColorsPallete pallete) {
     return TextTheme(
-      headline6: ThemeTextStyles.headline6.copyWith(color: pallete.secondaryGray1),
-      subtitle1: ThemeTextStyles.subtitle1.copyWith(color: pallete.secondaryGray1),
-      subtitle2: ThemeTextStyles.subtitle2.copyWith(color: pallete.secondaryGray2),
-      bodyText1: ThemeTextStyles.bodyText1.copyWith(color: pallete.secondaryGray1),
-      bodyText2: ThemeTextStyles.bodyText2.copyWith(color: pallete.secondaryGray2),
-      caption: ThemeTextStyles.caption.copyWith(color: pallete.secondaryGray2),
-      button: ThemeTextStyles.button.copyWith(color: pallete.secondaryGray3),
-      overline: ThemeTextStyles.overline.copyWith(color: pallete.secondaryGray1),
+      titleMedium: ThemeTextStyles.headline6.copyWith(color: pallete.secondaryGray1),
+      labelLarge: ThemeTextStyles.subtitle1.copyWith(color: pallete.secondaryGray1),
+      labelMedium: ThemeTextStyles.subtitle2.copyWith(color: pallete.secondaryGray2),
+      bodyLarge: ThemeTextStyles.bodyText1.copyWith(color: pallete.secondaryGray1),
+      bodyMedium: ThemeTextStyles.bodyText2.copyWith(color: pallete.secondaryGray2),
+      // caption: ThemeTextStyles.caption.copyWith(color: pallete.secondaryGray2),
+      // button: ThemeTextStyles.button.copyWith(color: pallete.secondaryGray3),
+      // overline: ThemeTextStyles.overline.copyWith(color: pallete.secondaryGray1),
     );
   }
 }

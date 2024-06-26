@@ -29,7 +29,7 @@ class InstallmentsOptionsListTile extends StatelessWidget {
           ),
           title: Text(
             data.title,
-            style: Theme.of(context).textTheme.bodyText1?.copyWith(fontWeight: FontWeight.bold),
+            style: Theme.of(context).textTheme.labelLarge?.copyWith(fontWeight: FontWeight.bold),
           ),
           trailing: Wrap(
             direction: Axis.vertical,
@@ -42,7 +42,7 @@ class InstallmentsOptionsListTile extends StatelessWidget {
                   if (data.prefix != null) Text(data.prefix!),
                   Text(
                     data.subtitle,
-                    style: Theme.of(context).textTheme.bodyText1?.copyWith(fontWeight: FontWeight.bold),
+                    style: Theme.of(context).textTheme.labelLarge?.copyWith(fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
