@@ -35,7 +35,7 @@ class PaymentMethodsWidget extends StatelessWidget {
     return PayuWidget<PaymentWidgetController, PaymentWidgetAssembler>(
       assembler: () => PaymentWidgetAssembler(configuration, service, storage, listener),
       builder: (context, controller) => Container(
-        color: Theme.of(context).colorScheme.surface,
+        color: Theme.of(context).scaffoldBackgroundColor,
         child: Padding(
           padding: const EdgeInsets.symmetric(
             horizontal: PayuPadding.padding4,
@@ -122,7 +122,7 @@ class _Empty extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
       child: Text(
         'select_payment_method'.translated(),
-        style: Theme.of(context).textTheme.titleSmall,
+        style: Theme.of(context).textTheme.bodyMedium,
         overflow: TextOverflow.ellipsis,
         maxLines: 1,
       ),
@@ -165,7 +165,7 @@ class _Info extends StatelessWidget {
               Flexible(
                 child: Text(
                   controller.name ?? '',
-                  style: Theme.of(context).textTheme.titleSmall,
+                  style: Theme.of(context).textTheme.labelMedium,
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2,
                 ),
@@ -173,7 +173,7 @@ class _Info extends StatelessWidget {
             if (controller.description != null)
               Text(
                 controller.description!,
-                style: Theme.of(context).textTheme.bodyMedium,
+                style: Theme.of(context).textTheme.labelMedium,
                 overflow: TextOverflow.ellipsis,
                 maxLines: 1,
               )

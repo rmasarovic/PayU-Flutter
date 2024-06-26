@@ -1,10 +1,10 @@
 payu_interface:
   git:
-    url: https://github.com/PayU-EMEA/PayU-Flutter.git
+    url: https://github.com/rmasarovic/PayU-Flutter
     path: payu_interface
     ref: 1.0.6
 payu_ui:
   git:
-    url: https://github.com/PayU-EMEA/PayU-Flutter.git
+    url: https://github.com/rmasarovic/PayU-Flutter
     path: payu_ui
     ref: 1.0.6

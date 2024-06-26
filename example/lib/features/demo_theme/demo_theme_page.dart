@@ -24,7 +24,7 @@ class DemoThemePage extends GetView<DemoThemeController> {
         colorScheme: theme.colorScheme.copyWith(primary: _awesomeColor),
       ),
       child: Scaffold(
-        backgroundColor: Theme.of(context).colorScheme.surface,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         appBar: AppBar(
           title: PayuImage.logo(),
           leading: IconButton(

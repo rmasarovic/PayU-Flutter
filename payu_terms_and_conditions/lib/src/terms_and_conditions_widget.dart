@@ -18,7 +18,7 @@ class TermsAndConditionsWidget extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         child: InkWell(
           child: Container(
-            color: Theme.of(context).colorScheme.surface,
+            color: Theme.of(context).scaffoldBackgroundColor,
             child: Padding(
               padding: const EdgeInsets.all(PayuPadding.padding16),
               child: RichText(
@@ -26,15 +26,15 @@ class TermsAndConditionsWidget extends StatelessWidget {
                   children: [
                     TextSpan(
                       text: 'i_accept'.translated(),
-                      style: Theme.of(context).textTheme.bodySmall,
+                      style: Theme.of(context).textTheme.labelSmall,
                     ),
                     TextSpan(
                       text: ' ',
-                      style: Theme.of(context).textTheme.bodySmall,
+                      style: Theme.of(context).textTheme.labelSmall,
                     ),
                     TextSpan(
                       text: 'pay_u_payment_terms'.translated(),
-                      style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Theme.of(context).primaryColor),
+                      style: Theme.of(context).textTheme.labelSmall?.copyWith(color: Theme.of(context).primaryColor),
                     ),
                   ],
                 ),

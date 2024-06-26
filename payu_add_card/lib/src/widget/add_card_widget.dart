@@ -44,7 +44,7 @@ class AddCardWidget extends StatelessWidget {
                   children: [
                     Text(
                       'new_card'.translated(),
-                      style: Theme.of(context).textTheme.bodySmall,
+                      style: Theme.of(context).textTheme.titleMedium,
                     ),
                     Expanded(
                       child: Padding(

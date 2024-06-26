@@ -24,7 +24,7 @@
 dependencies:
   payu:
     git: 
-      url: https://github.com/PayU-EMEA/PayU-Flutter.git
+      url: https://github.com/rmasarovic/PayU-Flutter
       path: payu
 ```
 

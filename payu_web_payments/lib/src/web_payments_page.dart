@@ -56,7 +56,7 @@ class _WebPaymentsPageState extends State<WebPaymentsPage> with WebPaymentsContr
     return PayuWidget<WebPaymentsController, WebPaymentsAssembler>(
       assembler: () => assembler,
       builder: (context, controller) => Scaffold(
-        backgroundColor: Theme.of(context).colorScheme.surface,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         appBar: AppBar(
           title: PayuImage.logo(),
           bottom: PreferredSize(
