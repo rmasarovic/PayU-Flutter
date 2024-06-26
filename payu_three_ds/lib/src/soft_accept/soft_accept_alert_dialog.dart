@@ -28,23 +28,23 @@ class SoftAcceptAlertDialog extends StatelessWidget {
               width: 24.0,
               child: Opacity(
                 opacity: double.minPositive,
-                child: WebView(
-                  backgroundColor: Colors.yellowAccent,
-                  debuggingEnabled: true,
-                  initialUrl: Uri.dataFromString(controller.iframe, mimeType: 'text/html').toString(),
-                  javascriptMode: JavascriptMode.unrestricted,
-                  onPageFinished: (e) => controller.didCompleteProcessingPage(),
-                  onWebViewCreated: (e) => controller.didCreateWebViewController(e),
-                  javascriptChannels: {
-                    JavascriptChannel(
-                      name: SoftAcceptConstants.javascriptChannelName,
+                child: WebViewWidget(
+
+                  controller: WebViewController()
+                  ..addJavaScriptChannel(SoftAcceptConstants.javascriptChannelName,
                       onMessageReceived: (e) async {
                         final message = await controller.handleJavascriptMessage(e.message);
                         // ignore: use_build_context_synchronously
                         if (message != null) Navigator.of(context).pop(message);
-                      },
-                    ),
-                  },
+                      })
+                  ..setBackgroundColor(Colors.yellowAccent)
+                    ..setJavaScriptMode(JavaScriptMode.unrestricted)
+                    ..loadRequest(Uri.parse(Uri.dataFromString(controller.iframe, mimeType: 'text/html').toString()))
+                    ..setNavigationDelegate( NavigationDelegate(
+                      onPageFinished: (e) => controller.didCompleteProcessingPage(),
+
+                    ))
+                  ,
                 ),
               ),
             )
