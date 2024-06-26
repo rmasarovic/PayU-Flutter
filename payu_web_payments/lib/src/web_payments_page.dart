@@ -25,6 +25,25 @@ class _WebPaymentsPageState extends State<WebPaymentsPage> with WebPaymentsContr
 
   @override
   Widget build(BuildContext context) {
+    var wwcontroller=WebViewController()
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      ..loadRequest(Uri.parse(controller.initialUri))
+      ..setNavigationDelegate(
+
+          NavigationDelegate(
+            onNavigationRequest:  (request) => controller.navigationDecision(request.url),
+            // onWebViewCreated: (webViewController) => controller.didUpdateWebViewController(webViewController),
+            onWebResourceError: (error) => controller.didUpdateWebResourceError(error),
+
+            onPageStarted: (uri) => controller.didStartNavigation(uri),
+            onPageFinished: (uri) => controller.didFinishNavigation(uri),
+
+          )
+      );
+    // if (wwcontroller.platform is WebKitWebViewController) {
+    //   (wwcontroller.platform as WebKitWebViewController)
+    //       .setAllowsBackForwardNavigationGestures(true);
+    // }
     return PayuWidget<WebPaymentsController, WebPaymentsAssembler>(
       assembler: () => assembler,
       builder: (context, controller) => Scaffold(
@@ -59,25 +78,7 @@ class _WebPaymentsPageState extends State<WebPaymentsPage> with WebPaymentsContr
           ),
         ),
         body: WebViewWidget(
-            
-            controller: WebViewController()
-              ..setJavaScriptMode(JavaScriptMode.unrestricted)
-              ..loadRequest(uri)
-              ..setNavigationDelegate(
-                NavigationDelegate(
-
-                  onWebViewCreated: (webViewController) => controller.didUpdateWebViewController(webViewController),
-                  onWebResourceError: (error) => controller.didUpdateWebResourceError(error),
-                  initialUrl: controller.initialUri,
-                  navigationDelegate: (request) => controller.navigationDecision(request.url),
-                  onPageStarted: (uri) => controller.didStartNavigation(uri),
-                  onPageFinished: (uri) => controller.didFinishNavigation(uri),
-                  javascriptMode: JavascriptMode.unrestricted,
-                  gestureNavigationEnabled: true,
-                )
-              )
-              ,
-
+            controller:wwcontroller
         ),
       ),
     );

@@ -535,7 +535,7 @@ packages:
       path: payu_add_card
       ref: HEAD
       resolved-ref: f3e425edf89e3648031def44655ec2362c5c9201
-      url: "https://github.com/rmasarovic/PayU-Flutter"
+      url: "https://github.com/PayU-EMEA/PayU-Flutter.git"
     source: git
     version: "1.0.2"
   payu_api:
@@ -544,7 +544,7 @@ packages:
       path: payu_api
       ref: HEAD
       resolved-ref: f3e425edf89e3648031def44655ec2362c5c9201
-      url: "https://github.com/rmasarovic/PayU-Flutter"
+      url: "https://github.com/PayU-EMEA/PayU-Flutter.git"
     source: git
     version: "1.0.2"
   payu_core:
@@ -553,7 +553,7 @@ packages:
       path: payu_core
       ref: HEAD
       resolved-ref: f3e425edf89e3648031def44655ec2362c5c9201
-      url: "https://github.com/rmasarovic/PayU-Flutter"
+      url: "https://github.com/PayU-EMEA/PayU-Flutter.git"
     source: git
     version: "1.0.2"
   payu_interface:
@@ -562,7 +562,7 @@ packages:
       path: payu_interface
       ref: HEAD
       resolved-ref: f3e425edf89e3648031def44655ec2362c5c9201
-      url: "https://github.com/rmasarovic/PayU-Flutter"
+      url: "https://github.com/PayU-EMEA/PayU-Flutter.git"
     source: git
     version: "1.0.2"
   payu_mastercard_installments:
@@ -571,7 +571,7 @@ packages:
       path: payu_mastercard_installments
       ref: HEAD
       resolved-ref: f3e425edf89e3648031def44655ec2362c5c9201
-      url: "https://github.com/rmasarovic/PayU-Flutter"
+      url: "https://github.com/PayU-EMEA/PayU-Flutter.git"
     source: git
     version: "1.0.2"
   payu_mobile_payments:
@@ -580,7 +580,7 @@ packages:
       path: "payu_mobile_payments/payu_mobile_payments"
       ref: HEAD
       resolved-ref: f3e425edf89e3648031def44655ec2362c5c9201
-      url: "https://github.com/rmasarovic/PayU-Flutter"
+      url: "https://github.com/PayU-EMEA/PayU-Flutter.git"
     source: git
     version: "1.0.2"
   payu_mobile_payments_android:
@@ -589,7 +589,7 @@ packages:
       path: "payu_mobile_payments/payu_mobile_payments_android"
       ref: HEAD
       resolved-ref: f3e425edf89e3648031def44655ec2362c5c9201
-      url: "https://github.com/rmasarovic/PayU-Flutter"
+      url: "https://github.com/PayU-EMEA/PayU-Flutter.git"
     source: git
     version: "1.0.1"
   payu_mobile_payments_ios:
@@ -598,7 +598,7 @@ packages:
       path: "payu_mobile_payments/payu_mobile_payments_ios"
       ref: HEAD
       resolved-ref: f3e425edf89e3648031def44655ec2362c5c9201
-      url: "https://github.com/rmasarovic/PayU-Flutter"
+      url: "https://github.com/PayU-EMEA/PayU-Flutter.git"
     source: git
     version: "1.0.1"
   payu_mobile_payments_platform_interface:
@@ -607,7 +607,7 @@ packages:
       path: "payu_mobile_payments/payu_mobile_payments_platform_interface"
       ref: HEAD
       resolved-ref: f3e425edf89e3648031def44655ec2362c5c9201
-      url: "https://github.com/rmasarovic/PayU-Flutter"
+      url: "https://github.com/PayU-EMEA/PayU-Flutter.git"
     source: git
     version: "1.0.1"
   payu_payment_methods:
@@ -616,7 +616,7 @@ packages:
       path: payu_payment_methods
       ref: HEAD
       resolved-ref: f3e425edf89e3648031def44655ec2362c5c9201
-      url: "https://github.com/rmasarovic/PayU-Flutter"
+      url: "https://github.com/PayU-EMEA/PayU-Flutter.git"
     source: git
     version: "1.0.2"
   payu_state_management:
@@ -625,7 +625,7 @@ packages:
       path: payu_state_management
       ref: HEAD
       resolved-ref: f3e425edf89e3648031def44655ec2362c5c9201
-      url: "https://github.com/rmasarovic/PayU-Flutter"
+      url: "https://github.com/PayU-EMEA/PayU-Flutter.git"
     source: git
     version: "1.0.2"
   payu_terms_and_conditions:
@@ -634,7 +634,7 @@ packages:
       path: payu_terms_and_conditions
       ref: HEAD
       resolved-ref: f3e425edf89e3648031def44655ec2362c5c9201
-      url: "https://github.com/rmasarovic/PayU-Flutter"
+      url: "https://github.com/PayU-EMEA/PayU-Flutter.git"
     source: git
     version: "1.0.2"
   payu_three_ds:
@@ -643,7 +643,7 @@ packages:
       path: payu_three_ds
       ref: HEAD
       resolved-ref: f3e425edf89e3648031def44655ec2362c5c9201
-      url: "https://github.com/rmasarovic/PayU-Flutter"
+      url: "https://github.com/PayU-EMEA/PayU-Flutter.git"
     source: git
     version: "1.0.2"
   payu_translations:
@@ -652,7 +652,7 @@ packages:
       path: payu_translations
       ref: HEAD
       resolved-ref: f3e425edf89e3648031def44655ec2362c5c9201
-      url: "https://github.com/rmasarovic/PayU-Flutter"
+      url: "https://github.com/PayU-EMEA/PayU-Flutter.git"
     source: git
     version: "1.0.2"
   payu_ui:
@@ -661,7 +661,7 @@ packages:
       path: payu_ui
       ref: HEAD
       resolved-ref: f3e425edf89e3648031def44655ec2362c5c9201
-      url: "https://github.com/rmasarovic/PayU-Flutter"
+      url: "https://github.com/PayU-EMEA/PayU-Flutter.git"
     source: git
     version: "1.0.2"
   payu_web_payments:
@@ -670,7 +670,7 @@ packages:
       path: payu_web_payments
       ref: HEAD
       resolved-ref: f3e425edf89e3648031def44655ec2362c5c9201
-      url: "https://github.com/rmasarovic/PayU-Flutter"
+      url: "https://github.com/PayU-EMEA/PayU-Flutter.git"
     source: git
     version: "1.0.2"
   platform:
