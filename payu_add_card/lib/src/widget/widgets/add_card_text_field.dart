@@ -58,6 +58,7 @@ class AddCardTextField extends StatelessWidget {
                             constraints: const BoxConstraints(minWidth: 52),
                             child: IntrinsicWidth(
                               child: TextField(
+                                keyboardType: decoration.inputType,
                                 textAlign:
                                     decoration.textAlign ?? TextAlign.center,
                                 cursorColor: decoration.cursorColor,
