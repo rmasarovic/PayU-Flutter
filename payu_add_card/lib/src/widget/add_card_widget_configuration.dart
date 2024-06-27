@@ -38,6 +38,7 @@ class AddCardWidgetTextInputDecoration {
   final TextStyle hintStyle;
   final TextStyle errorTextStyle;
   final int maxLength;
+  final TextInputType? inputType;
   final List<TextInputFormatter>? inputFormatters;
 
   const AddCardWidgetTextInputDecoration( {
@@ -54,6 +55,7 @@ class AddCardWidgetTextInputDecoration {
     required this.maxLength,
     this.hintText,
     this.inputFormatters,
+    this.inputType,
   });
 
   factory AddCardWidgetTextInputDecoration.cvv() {
