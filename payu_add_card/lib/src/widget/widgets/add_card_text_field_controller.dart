@@ -22,7 +22,7 @@ class AddCardTextFieldController extends PayuController {
   }
 
   void didUpdateFocus(bool focused) {
-    focused ? reset() : prevalidate();
+    // focused ? reset() : prevalidate();
   }
 
   void prevalidate() {
