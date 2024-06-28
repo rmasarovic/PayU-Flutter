@@ -123,7 +123,7 @@ class AddCardTextField extends StatelessWidget {
                                   maintainAnimation: true,
                                   visible: controller.errorText != null,
                                   child: Padding(
-                                    padding: const EdgeInsets.only(top: 4.0),
+                                    padding: const EdgeInsets.only(top: 4.0, bottom: 4.0),
                                     child: Text(
                                       controller.errorText ?? "",
                                       style: decoration.errorTextStyle,
