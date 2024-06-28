@@ -43,7 +43,7 @@ class CardNumberValidator implements CardDataValidator {
     if (value == null) throw AddCardException.emptyNumber();
     if (value.isEmpty) throw AddCardException.emptyNumber();
 
-    final provider = _finder.find(value);
+    final provider = _finder.find(value.replaceAll(" ", ""));
     if (provider == null) throw AddCardException.invalidNumber();
   }
 }
