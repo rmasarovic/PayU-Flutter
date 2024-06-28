@@ -88,7 +88,7 @@ class AddCardWidgetTextInputDecoration {
         maxLength: maxLength ?? this.maxLength,
         inputType: inputType ?? this.inputType,
         inputFormatters: inputFormatters ?? this.inputFormatters,
-        prefixIcon: prefixIcon ?? this.prefixIcon)
+        prefixIcon: prefixIcon ?? this.prefixIcon);
   }
 
   factory AddCardWidgetTextInputDecoration.cvv() {
