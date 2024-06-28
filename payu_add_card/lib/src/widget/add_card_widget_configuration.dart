@@ -40,9 +40,9 @@ class AddCardWidgetTextInputDecoration {
   final int maxLength;
   final TextInputType? inputType;
   final List<TextInputFormatter>? inputFormatters;
+  final Widget? prefixIcon;
 
-  const AddCardWidgetTextInputDecoration( {
-    required this.title,
+  const AddCardWidgetTextInputDecoration({required this.title,
     required this.titleStyle,
     required this.borderColor,
     required this.errorBorderColor,
@@ -56,7 +56,40 @@ class AddCardWidgetTextInputDecoration {
     this.hintText,
     this.inputFormatters,
     this.inputType,
-  });
+    this.prefixIcon});
+
+  AddCardWidgetTextInputDecoration copyWith({
+    String? hintText,
+    String? title,
+    TextStyle? titleStyle,
+    Color? borderColor,
+    Color? errorBorderColor,
+    Color? cursorColor,
+    Color? fillColor,
+    TextAlign? textAlign,
+    TextStyle? inputTextStyle,
+    TextStyle? hintStyle,
+    TextStyle? errorTextStyle,
+    int? maxLength,
+    TextInputType? inputType,
+    List<TextInputFormatter>? inputFormatters,
+    Widget? prefixIcon,}) {
+    return AddCardWidgetTextInputDecoration(
+        hintText: hintText ?? this.hintText,
+        title: title ?? this.title,
+        titleStyle: titleStyle ?? this.titleStyle,
+        borderColor: borderColor ?? this.borderColor,
+        errorBorderColor: errorBorderColor ?? this.errorBorderColor,
+        cursorColor: cursorColor ?? this.cursorColor,
+        fillColor: fillColor ?? this.fillColor,
+        inputTextStyle: inputTextStyle ?? this.inputTextStyle,
+        hintStyle: hintStyle ?? this.hintStyle,
+        errorTextStyle: errorTextStyle ?? this.errorTextStyle,
+        maxLength: maxLength ?? this.maxLength,
+        inputType: inputType ?? this.inputType,
+        inputFormatters: inputFormatters ?? this.inputFormatters,
+        prefixIcon: prefixIcon ?? this.prefixIcon)
+  }
 
   factory AddCardWidgetTextInputDecoration.cvv() {
     return AddCardWidgetTextInputDecoration(
@@ -69,7 +102,8 @@ class AddCardWidgetTextInputDecoration {
       inputTextStyle: TextStyle(),
       hintStyle: TextStyle(),
       errorTextStyle: TextStyle(),
-      maxLength: 3, titleStyle: TextStyle(),
+      maxLength: 3,
+      titleStyle: TextStyle(),
     );
   }
 
