@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:http/browser_client.dart';
 import 'package:http/http.dart';
 
-import 'package:http/io_client.dart';
+import 'package:http/io_client.dart' as ioClient;
 import 'package:universal_io/io.dart';
 
 class SecureHttpClient extends BaseClient{
@@ -15,7 +15,7 @@ class SecureHttpClient extends BaseClient{
     if (kIsWeb) {
       client = BrowserClient();
     } else {
-      client = IOClient();
+      client = ioClient.IOClient();
     }
   }
 
