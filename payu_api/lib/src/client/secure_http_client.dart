@@ -1,23 +1,13 @@
+import 'dart:io';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:http/browser_client.dart';
-import 'package:http/http.dart';
 
-import 'package:http/io_client.dart' as ioClient;
-import 'package:universal_io/io.dart';
+import 'package:http/io_client.dart';
 
-class SecureHttpClient extends BaseClient{
+class SecureHttpClient extends IOClient {
   final HttpClient httpClient;
-  BaseClient? client;
 
-  SecureHttpClient(this.httpClient){
-    if (kIsWeb) {
-      client = BrowserClient();
-    } else {
-      client = ioClient.IOClient();
-    }
-  }
+  SecureHttpClient(this.httpClient) : super(httpClient);
 
   factory SecureHttpClient.create() {
     final context = _makeGlobalSecurityContext();
@@ -37,10 +27,5 @@ class SecureHttpClient extends BaseClient{
       final certificate = await rootBundle.load(certificatePath);
       context.setTrustedCertificatesBytes(certificate.buffer.asInt8List());
     } catch (_) {}
-  }
-
-  @override
-  Future<StreamedResponse> send(BaseRequest request) {
-     return client!.send(request);
   }
 }
