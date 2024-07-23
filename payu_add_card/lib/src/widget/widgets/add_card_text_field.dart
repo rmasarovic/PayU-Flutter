@@ -62,7 +62,7 @@ class AddCardTextField extends StatelessWidget {
                                   child: TextField(
                                     keyboardType: decoration.inputType,
                                     textAlign: decoration.textAlign ??
-                                        TextAlign.center,
+                                        TextAlign.left,
                                     cursorColor: decoration.cursorColor,
                                     cursorWidth: 0.5,
                                     style: decoration.inputTextStyle,
