@@ -58,7 +58,7 @@ class ThemeDataFactory {
   }
 
   static CardTheme _cardTheme(ThemeColorsPallete pallete) {
-    return CardTheme(
+    return CardThemeData(
       color: pallete.secondaryGray4,
       elevation: 0,
       margin: const EdgeInsets.all(0.0),
