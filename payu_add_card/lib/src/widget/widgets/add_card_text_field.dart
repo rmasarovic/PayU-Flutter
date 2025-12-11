@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-
 import 'package:payu_ui/payu_ui.dart';
 
 import '../add_card_widget_configuration.dart';
@@ -41,13 +39,15 @@ class AddCardTextField extends StatelessWidget {
                     children: [
                       ConstrainedBox(
                         constraints: const BoxConstraints(maxWidth: 103),
-                        child: Expanded(
-                          child: Text(
-                            "${decoration.title}:",
-                            textAlign: TextAlign.right,
-                            style: decoration.titleStyle,
+                        child: Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+                          Expanded(
+                            child: Text(
+                              "${decoration.title}:",
+                              textAlign: TextAlign.right,
+                              style: decoration.titleStyle,
+                            ),
                           ),
-                        ),
+                        ]),
                       ),
                       const SizedBox(
                         width: 10.0,
@@ -111,7 +111,8 @@ class AddCardTextField extends StatelessWidget {
                     children: [
                       ConstrainedBox(
                           constraints: const BoxConstraints(maxWidth: 103),
-                          child: Container()),
+                          child:
+                              Row(mainAxisAlignment: MainAxisAlignment.end, children: [Expanded(child: Container())])),
                       const SizedBox(
                         width: 10.0,
                       ),
