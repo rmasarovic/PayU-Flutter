@@ -39,13 +39,16 @@ class AddCardTextField extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Expanded(
-                          flex: 2,
+                      ConstrainedBox(
+                        constraints: const BoxConstraints(maxWidth: 103),
+                        child: Expanded(
                           child: Text(
                             "${decoration.title}:",
                             textAlign: TextAlign.right,
                             style: decoration.titleStyle,
-                          )),
+                          ),
+                        ),
+                      ),
                       const SizedBox(
                         width: 10.0,
                       ),
@@ -106,7 +109,9 @@ class AddCardTextField extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Expanded(flex: 2, child: Container()),
+                      ConstrainedBox(
+                          constraints: const BoxConstraints(maxWidth: 103),
+                          child: Container()),
                       const SizedBox(
                         width: 10.0,
                       ),

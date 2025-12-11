@@ -36,7 +36,7 @@ class AddCardWidget extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // Padding(
               //   padding: const EdgeInsets.symmetric(vertical: PayuPadding.padding8),
